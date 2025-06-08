@@ -1,175 +1,210 @@
-# quiz
-class 12 PCM Online quiz
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Class 12 PCM Hard Level Quiz with Timer</title>
-<style>
-  body { font-family: Arial, sans-serif; max-width: 700px; margin: 20px auto; padding: 10px; }
-  h2 { color: #2c3e50; }
-  .question { margin-bottom: 20px; }
-  label { display: block; margin: 5px 0; cursor: pointer; }
-  button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
-  #result { margin-top: 20px; font-size: 18px; font-weight: bold; white-space: pre-line; }
-  #timer { font-size: 20px; font-weight: bold; color: #e74c3c; margin-bottom: 20px; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class 12 PCM Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 { color: #2c3e50; }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h4 {
+      margin-bottom: 10px;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .timer {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #e74c3c;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #ecf0f1;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h2>Class 12 PCM Quiz</h2>
+    <p><strong>Marking Scheme:</strong> ✅ Correct: +4, ❌ Incorrect: -3, ➖ Skipped: -1</p>
+    <p><strong>Instructions:</strong> All questions are single correct. Do not mark more than one option. Time: 20 minutes</p>
 
-<h2>Class 12 PCM Hard Level Quiz</h2>
+    <div class="timer" id="timer">Time left: 20:00</div>
 
-<div id="timer">Time Remaining: 20:00</div>
+    <form id="quizForm">
+      <div class="question">
+        <h4>Student Name:</h4>
+        <input type="text" name="studentName" required />
+      </div>
+      <div class="question">
+        <h4>Roll Number:</h4>
+        <input type="text" name="rollNo" required />
+      </div>
 
-<p><strong>Marking Scheme:</strong> Correct: +4, Incorrect: –3, Skipped: –1</p>
-<p><em>Instructions: Select only one option per question. Submit once.</em></p>
+      <div class="question">
+        <h4>1. Which of the following is a positive deviated non-ideal solution?</h4>
+        <div class="options">
+          <label><input type="radio" name="q1" value="A"> Benzene, Toluene</label>
+          <label><input type="radio" name="q1" value="B"> Pyridine, Acetic acid</label>
+          <label><input type="radio" name="q1" value="C"> Benzene, Acetone</label>
+          <label><input type="radio" name="q1" value="D"> Aniline, Acetone</label>
+        </div>
+      </div>
 
-<form id="quizForm">
+      <div class="question">
+        <h4>2. The vapour pressure of a pure liquid A is 40 mm Hg at 310 K... 10Xₐ?</h4>
+        <div class="options">
+          <label><input type="radio" name="q2" value="A"> 5.5</label>
+          <label><input type="radio" name="q2" value="B"> 8</label>
+          <label><input type="radio" name="q2" value="C"> 12.5</label>
+          <label><input type="radio" name="q2" value="D"> 5</label>
+        </div>
+      </div>
 
-  <div class="question">
-    <p><strong>1. Which of the following is a positive deviated non-ideal solution?</strong></p>
-    <label><input type="radio" name="q1" value="A" /> Benzene, Toluene</label>
-    <label><input type="radio" name="q1" value="B" /> Pyridine, Acetic acid</label>
-    <label><input type="radio" name="q1" value="C" /> Benzene, Acetone</label>
-    <label><input type="radio" name="q1" value="D" /> Aniline, Acetone</label>
+      <div class="question">
+        <h4>3. Calculate: 5 + 55 + 555 + 5555 + 55555 = ?</h4>
+        <div class="options">
+          <label><input type="radio" name="q3" value="A"> 61725</label>
+          <label><input type="radio" name="q3" value="B"> 61726</label>
+          <label><input type="radio" name="q3" value="C"> 61732</label>
+          <label><input type="radio" name="q3" value="D"> 61730</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h4>4. If (log₂(x))/4 = (log₂(y))/6 = (log₂(z))/(3k)... value of k?</h4>
+        <div class="options">
+          <label><input type="radio" name="q4" value="A"> 8</label>
+          <label><input type="radio" name="q4" value="B"> –1</label>
+          <label><input type="radio" name="q4" value="C"> 1</label>
+          <label><input type="radio" name="q4" value="D"> –8</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h4>5. An aluminium rod with Young’s modulus Y = 7.0×10¹⁰ N/m² undergoes strain 0.04%</h4>
+        <div class="options">
+          <label><input type="radio" name="q5" value="A"> 11200</label>
+          <label><input type="radio" name="q5" value="B"> 5600</label>
+          <label><input type="radio" name="q5" value="C"> 2800</label>
+          <label><input type="radio" name="q5" value="D"> 8400</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h4>6. If Young’s modulus Y = 2×10¹⁰, Poisson ratio = 0.3, find compressibility:</h4>
+        <div class="options">
+          <label><input type="radio" name="q6" value="A"> 6×10⁻¹⁰</label>
+          <label><input type="radio" name="q6" value="B"> 6×10⁻⁹</label>
+          <label><input type="radio" name="q6" value="C"> 2.4×10⁻¹⁰</label>
+          <label><input type="radio" name="q6" value="D"> 2.4×10⁻⁹</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h4>7. Final expression: (a×b) + (5/6 × 1/xy) - 2 + (mM/180) = ?</h4>
+        <div class="options">
+          <label><input type="radio" name="q7" value="A"> 64</label>
+          <label><input type="radio" name="q7" value="B"> 27.7</label>
+          <label><input type="radio" name="q7" value="C"> 97</label>
+          <label><input type="radio" name="q7" value="D"> 99</label>
+        </div>
+      </div>
+
+      <button type="submit">Submit Quiz</button>
+    </form>
+
+    <div id="result" style="display:none;"></div>
   </div>
 
-  <div class="question">
-    <p><strong>2. The vapour pressure of pure liquid A is 40 mm Hg at 310 K. Vapour pressure in solution is 32 mm Hg. Find 10X_A:</strong></p>
-    <label><input type="radio" name="q2" value="A" /> 5.5</label>
-    <label><input type="radio" name="q2" value="B" /> 8</label>
-    <label><input type="radio" name="q2" value="C" /> 12.5</label>
-    <label><input type="radio" name="q2" value="D" /> 5</label>
-  </div>
+  <script>
+    const timerDisplay = document.getElementById('timer');
+    let time = 20 * 60;
 
-  <div class="question">
-    <p><strong>3. Calculate: 5 + 55 + 555 + 5555 + 55555 = ?</strong></p>
-    <label><input type="radio" name="q3" value="A" /> 61725</label>
-    <label><input type="radio" name="q3" value="B" /> 61726</label>
-    <label><input type="radio" name="q3" value="C" /> 61732</label>
-    <label><input type="radio" name="q3" value="D" /> 61730</label>
-  </div>
+    function updateTimer() {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      timerDisplay.textContent = \`Time left: \${minutes.toString().padStart(2, '0')}:\${seconds.toString().padStart(2, '0')}\`;
+      if (time > 0) {
+        time--;
+        setTimeout(updateTimer, 1000);
+      } else {
+        alert("Time's up! Auto-submitting the quiz.");
+        document.getElementById('quizForm').requestSubmit();
+      }
+    }
 
-  <div class="question">
-    <p><strong>4. If (log₂(x))/4 = (log₂(y))/6 = (log₂(z))/(3k) and x³·y²·z = 1, find k:</strong></p>
-    <label><input type="radio" name="q4" value="A" /> 8</label>
-    <label><input type="radio" name="q4" value="B" /> –1</label>
-    <label><input type="radio" name="q4" value="C" /> 1</label>
-    <label><input type="radio" name="q4" value="D" /> –8</label>
-  </div>
+    updateTimer();
 
-  <div class="question">
-    <p><strong>5. Aluminium rod with Young’s modulus Y=7.0×10¹⁰ N/m² undergoes elastic strain of 0.04%. Energy per unit volume stored (SI units):</strong></p>
-    <label><input type="radio" name="q5" value="A" /> 11200</label>
-    <label><input type="radio" name="q5" value="B" /> 5600</label>
-    <label><input type="radio" name="q5" value="C" /> 2800</label>
-    <label><input type="radio" name="q5" value="D" /> 8400</label>
-  </div>
+    const answerKey = {
+      q1: "C",
+      q2: "B",
+      q3: "A",
+      q4: "D",
+      q5: "B",
+      q6: "B",
+      q7: "C"
+    };
 
-  <div class="question">
-    <p><strong>6. Young’s modulus Y=2×10¹⁰, Poisson ratio=0.3, find compressibility (SI units):</strong></p>
-    <label><input type="radio" name="q6" value="A" /> 6×10⁻¹⁰</label>
-    <label><input type="radio" name="q6" value="B" /> 6×10⁻⁹</label>
-    <label><input type="radio" name="q6" value="C" /> 2.4×10⁻¹⁰</label>
-    <label><input type="radio" name="q6" value="D" /> 2.4×10⁻⁹</label>
-  </div>
+    document.getElementById('quizForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let form = e.target;
+      let correct = 0, incorrect = 0, skipped = 0;
 
-  <div class="question">
-    <p><strong>7. Given vectors a, b and constants, find: (a×b) + (5/6 × 1/xy) - 2 + (mM/180) = ?</strong></p>
-    <label><input type="radio" name="q7" value="A" /> 64</label>
-    <label><input type="radio" name="q7" value="B" /> 27.7</label>
-    <label><input type="radio" name="q7" value="C" /> 97</label>
-    <label><input type="radio" name="q7" value="D" /> 99</label>
-  </div>
-
-  <button type="button" id="submitBtn" onclick="calculateScore()">Submit</button>
-</form>
-
-<div id="result"></div>
-
-<script>
-  const answers = {
-    q1: 'C',
-    q2: 'B',
-    q3: 'A',
-    q4: 'D',
-    q5: 'B',
-    q6: 'B',
-    q7: 'C'
-  };
-
-  function calculateScore() {
-    const form = document.getElementById('quizForm');
-    let score = 0;
-    let unanswered = 0;
-
-    for (let i = 1; i <= 7; i++) {
-      const qName = 'q' + i;
-      const options = form[qName];
-      let selected = null;
-
-      // Check selected radio for question i
-      if (options.length) {
-        for (const option of options) {
-          if (option.checked) {
-            selected = option.value;
-            break;
-          }
+      for (let i = 1; i <= 7; i++) {
+        const q = form["q" + i];
+        if (!q || !q.value) {
+          skipped++;
+        } else if (q.value === answerKey["q" + i]) {
+          correct++;
+        } else {
+          incorrect++;
         }
-      } else {
-        if (options.checked) selected = options.value;
       }
 
-      if (!selected) {
-        score -= 1;  // Skipped
-        unanswered++;
-      } else if (selected === answers[qName]) {
-        score += 4;  // Correct
-      } else {
-        score -= 3;  // Incorrect
-      }
-    }
+      const score = correct * 4 + incorrect * -3 + skipped * -1;
 
-    let resultText = `Your total score is: ${score} / 28.\n`;
-    if (unanswered > 0) {
-      resultText += `You skipped ${unanswered} question(s).\n`;
-    }
-
-    document.getElementById('result').textContent = resultText;
-    document.getElementById('submitBtn').disabled = true;
-
-    // Disable all inputs after submission
-    const inputs = document.querySelectorAll('input[type=radio]');
-    inputs.forEach(input => input.disabled = true);
-    clearInterval(timerInterval);
-  }
-
-  // Timer logic
-  const totalTime = 1200; // 20 minutes in seconds
-  let timeLeft = totalTime;
-  const timerEl = document.getElementById('timer');
-
-  function formatTime(seconds) {
-    const m = Math.floor(seconds / 60).toString().padStart(2, '0');
-    const s = (seconds % 60).toString().padStart(2, '0');
-    return `${m}:${s}`;
-  }
-
-  timerEl.textContent = `Time Remaining: ${formatTime(timeLeft)}`;
-
-  const timerInterval = setInterval(() => {
-    timeLeft--;
-    if (timeLeft <= 0) {
-      timerEl.textContent = "Time's up! Submitting quiz...";
-      calculateScore();
-      clearInterval(timerInterval);
-    } else {
-      timerEl.textContent = `Time Remaining: ${formatTime(timeLeft)}`;
-    }
-  }, 1000);
-
-</script>
-
+      const result = document.getElementById("result");
+      result.style.display = "block";
+      result.innerHTML = `
+        <strong>Result Report for ${form.studentName.value} (Roll No: ${form.rollNo.value})</strong><br>
+        ✅ Correct: ${correct}<br>
+        ❌ Incorrect: ${incorrect}<br>
+        ➖ Skipped: ${skipped}<br>
+        📊 Total Score: ${score}
+      `;
+    });
+  </script>
 </body>
 </html>
